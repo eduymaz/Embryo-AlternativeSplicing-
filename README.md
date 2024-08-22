@@ -22,3 +22,11 @@ Human preimplantation, embryonic development, alternative splicing, exon, bioinf
 <img width="792" alt="GüncelEmbryoDevelopment" src="https://github.com/user-attachments/assets/aaad77f8-7647-4bd8-b3fd-e165cdd4f871">
 
 Figure 1 | Schema of embryo development.
+
+
+
+Reference: https://github.com/huyustats/SCATS
+
+System requirement: For optimal performance, we recommend a HPC with 20+ cores
+
+Installation: https://github.com/huyustats/SCATS/blob/master/doc/Install.md
