@@ -1,4 +1,4 @@
-# Embryo-AlternativeSplicing-
+# SingleCellRNAseq-AlternativeSplicing-
 
 Background/Aim
 During the early stages of human embryo, the chromatin was subject to an uncanny orchestration leading to fast-paced changes on gene expression patterns. Even though we now have robust knowledge on the expression levels of genes during preimplantation, how alternative splicing (AS) events lead to different transcript isoforms at this stage remains largely unexplored.
