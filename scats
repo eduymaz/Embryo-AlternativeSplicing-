@@ -1,0 +1,8 @@
+SCATS | A statistical tool to detect differential alternative splicing events using single-cell RNA-seq
+
+
+Reference: https://github.com/huyustats/SCATS
+
+System requirement: For optimal performance, we recommend a HPC with 20+ cores
+
+Installation: https://github.com/huyustats/SCATS/blob/master/doc/Install.md
