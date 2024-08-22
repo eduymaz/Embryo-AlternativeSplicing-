@@ -17,8 +17,8 @@ Conclusion
 Highlighting the zygotic stage as the most AS-driven phase, the comprehensive list we are providing here involves many crucial genes related to chromatin regulation and RNA processing. Understanding the functional roles of these AS events in future could provide invaluable insights that can be harnessed for developmental biology and regenerative medicine. 
 
 | Keywords:
-
 Human preimplantation, embryonic development, alternative splicing, exon, bioinformatics
 
 <img width="792" alt="GüncelEmbryoDevelopment" src="https://github.com/user-attachments/assets/aaad77f8-7647-4bd8-b3fd-e165cdd4f871">
+
 Figure 1 | Schema of embryo development.
