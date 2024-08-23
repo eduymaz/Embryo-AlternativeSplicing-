@@ -75,6 +75,61 @@ ggplot(data_tidy, aes(x = gene_name, y = PSI, fill = Group)) +
   facet_wrap(~ Group_Label, scales = "free_y", ncol = 2)  # Multi box plot 
 
 
+####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### 
+# Figure 3 | Heatmap
+
+library(ggplot2)
+library(pheatmap)
+library(dendextend)
+library(reshape2)
+library(dplyr)
+
+selected_genes <- c("AMD1", "ARMC8", "ATP6V1C2", "TDP1", "THOC2", "UBAP2L")
+
+
+merged_data <- rbind(data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11)
+
+scats_data <- merged_data
+# change form
+scats_long <- melt(scats_data, id.vars = c("gp1", "gp2", "gene_name", "AS_exons"), 
+                   variable.name = "metric", value.name = "value")
+
+# Selected gene_name
+scats_long_selected <- scats_long[scats_long$gene_name %in% selected_genes, ]
+
+#define stage of GP1
+gp1_stage <- "Eblastocyst"  # TODO
+
+# Filtration of GP1
+subset_data <- scats_long_selected[scats_long_selected$gp1 == gp1_stage, ]
+
+# define stage of GP2
+gp2_stages <- unique(subset_data$gp2)
+
+# Heatmap function
+plot_heatmap <- function(data_matrix, title) {
+  pheatmap(data_matrix, cluster_rows = TRUE, cluster_cols = TRUE,
+           main = title,
+           color = colorRampPalette(c("blue", "white", "red"))(50),
+           show_rownames = TRUE, show_colnames = TRUE)
+}
+
+# make a matrix 
+if (nrow(subset_data) > 0) {
+  # Data matrix: rows are genes, columns are GP2 stages
+  data_matrix <- acast(subset_data, gene_name ~ gp2, value.var = "value")
+  
+  # make a heatmap
+  title <- paste("Heatmap for GP1 =", gp1_stage)
+  plot_heatmap(data_matrix, title)
+  
+} else {
+  print(paste("Yetersiz veri - GP1 Türü:", gp1_stage))
+}
+
+
+
+
 
 
 
